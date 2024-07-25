@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.devtools.ksp)
+    kotlin("kapt")
     alias(libs.plugins.dagger)
 }
 
@@ -47,5 +47,5 @@ dependencies {
 
     //dagger-hilt
     implementation(libs.dagger)
-    ksp(libs.dagger.compiler)
+    kapt(libs.dagger.compiler)
 }

@@ -1,8 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    kotlin("kapt")
     alias(libs.plugins.safeargs.kotlin)
-    alias(libs.plugins.devtools.ksp)
     alias(libs.plugins.dagger)
 }
 
@@ -46,9 +46,6 @@ dependencies {
     implementation(project(":data"))
     implementation(project(":domain"))
 
-    implementation(libs.androidx.room)
-    ksp(libs.androidx.room.compiler)
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -68,5 +65,13 @@ dependencies {
 
     //dagger-hilt
     implementation(libs.dagger)
-    ksp(libs.dagger.compiler)
+    kapt(libs.dagger.compiler)
+
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+    implementation(libs.logging.interceptor)
+}
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }
