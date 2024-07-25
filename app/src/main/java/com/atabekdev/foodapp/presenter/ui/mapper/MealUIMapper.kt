@@ -11,7 +11,8 @@ class MealUIMapper @Inject constructor() : MyMapper<Meal, MealUI> {
             idMeal,
             strArea,
             nameOfMeal,
-            strCategory
+            strCategory,
+            instruction
         )
     }
 }

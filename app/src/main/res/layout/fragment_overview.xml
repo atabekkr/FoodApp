@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_home"
+    android:paddingHorizontal="@dimen/normal_225"
+    tools:context=".presenter.ui.overview.OverviewFragment">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_marginTop="@dimen/normal_225"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/brand_color" />
+
+    <ImageView
+        android:id="@+id/iv_notification"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:src="@drawable/ic_notification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_back" />
+
+    <TextView
+        android:id="@+id/tv_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_125"
+        android:fontFamily="@font/font_lora_bold"
+        android:text="@string/breakfast"
+        android:textColor="@color/additional_color_1"
+        android:textSize="@dimen/normal_text_100"
+        app:layout_constraintStart_toStartOf="@id/iv_back"
+        app:layout_constraintTop_toBottomOf="@id/iv_back" />
+
+    <TextView
+        android:id="@+id/tv_cook_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_lora_semibold"
+        android:text="@string/today_s_fresh_recipe"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_text_125"
+        app:layout_constraintStart_toStartOf="@id/iv_back"
+        app:layout_constraintTop_toBottomOf="@id/tv_mode" />
+
+    <ImageView
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:src="@drawable/ic_fav_outlined"
+        app:layout_constraintBottom_toBottomOf="@id/tv_cook_today"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_cook_today" />
+
+    <LinearLayout
+        android:id="@+id/layout_stars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_100"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_cook_today">
+
+        <ImageView
+            android:layout_width="@dimen/normal_100"
+            android:layout_height="@dimen/normal_100"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/ic_star_filled" />
+
+        <ImageView
+            android:layout_width="@dimen/normal_100"
+            android:layout_height="@dimen/normal_100"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/ic_star_filled" />
+
+        <ImageView
+            android:layout_width="@dimen/normal_100"
+            android:layout_height="@dimen/normal_100"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/ic_star_filled" />
+
+        <ImageView
+            android:layout_width="@dimen/normal_100"
+            android:layout_height="@dimen/normal_100"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/ic_star_filled" />
+
+        <ImageView
+            android:layout_width="@dimen/normal_100"
+            android:layout_height="@dimen/normal_100"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/ic_star_half_filled" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_325"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_stars">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_pre_time"
+            android:drawablePadding="@dimen/normal_100"
+            android:text="10 mins"
+            android:textColor="#7B7B7B" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_150"
+            android:drawableStart="@drawable/ic_world"
+            android:drawablePadding="@dimen/normal_100"
+            android:text="British"
+            android:textColor="#7B7B7B" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_150"
+            android:drawableStart="@drawable/ic_serving"
+            android:drawablePadding="@dimen/normal_100"
+            android:text="1 Serving"
+            android:textColor="#7B7B7B" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="208dp"
+        android:layout_height="160dp"
+        android:src="@drawable/pic_cake"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_stars" />
+
+    <TextView
+        android:id="@+id/tv_ingred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_125"
+        android:fontFamily="@font/font_lora_bold"
+        android:text="@string/ingredients"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_info" />
+
+    <LinearLayout
+        android:id="@+id/layout_ingred"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_100"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv_ingred">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_150"
+            android:drawablePadding="@dimen/normal_100"
+            android:text="• 1 Serving"
+            android:textColor="#7B7B7B" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_150"
+            android:drawablePadding="@dimen/normal_100"
+            android:text="• 1 Serving"
+            android:textColor="#7B7B7B" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_150"
+            android:drawablePadding="@dimen/normal_100"
+            android:text="• 1 Serving"
+            android:textColor="#7B7B7B" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_125"
+        android:fontFamily="@font/font_lora_bold"
+        android:text="@string/ingredients"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_ingred" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_100"
+        android:layout_marginTop="@dimen/small_150"
+        android:drawablePadding="@dimen/normal_100"
+        android:text="First make the Hollandaise sauce.Lower the heat so that the water is simmering gently. Stir the water so you have a slight whirlpool, then slide in the eggs one by one. Cook each for about 4 mins, then remove with a slotted spoon.\r\n\r\nLightly toast and butter the muffins, then put a couple of slices of salmon on each half. Top each with an egg, spoon over some Hollandaise and garnish with chopped chives. Lower the heat so that the water is simmering gently. Stir the water so you have a slight whirlpool, then slide in the eggs one by one. Cook each for about 4 mins, then remove with a slotted spoon.\r\n\r\nLightly toast and butter the muffins, then put a couple of slices of salmon on each half. Top each with an egg, spoon over some Hollandaise and garnish with chopped chives."
+        android:textColor="#7B7B7B"
+        android:textSize="@dimen/small_text"
+        app:layout_constraintTop_toBottomOf="@id/tv_instruction" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/normal_100"
+        android:backgroundTint="@color/brand_color"
+        android:fontFamily="@font/font_lora_semibold"
+        android:text="@string/video"
+        android:textSize="@dimen/normal_text_125"
+        app:cornerRadius="@dimen/small_150"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

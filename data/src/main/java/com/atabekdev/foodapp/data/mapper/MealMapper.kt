@@ -10,8 +10,9 @@ class MealMapper @Inject constructor() : MyMapper<MealResponse, Meal> {
         Meal(
             idMeal,
             strArea,
-            nameOfMeal = strMeal,
-            strCategory
+            strMeal,
+            strCategory,
+            strInstructions
         )
     }
 }

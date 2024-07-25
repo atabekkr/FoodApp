@@ -6,4 +6,5 @@ interface MainRepository {
 
     suspend fun getFreshRecipes(): Result<List<Meal>>
 
+    suspend fun getMealById(id: Int): Result<Meal>
 }

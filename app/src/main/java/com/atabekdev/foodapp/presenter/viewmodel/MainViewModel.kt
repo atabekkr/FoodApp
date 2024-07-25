@@ -21,6 +21,9 @@ class MainViewModel @Inject constructor(
     private var _mealsResult = MutableLiveData<Result<List<MealUI>>>()
     val mealsResult: LiveData<Result<List<MealUI>>> get() = _mealsResult
 
+    private var _getMealResult = MutableLiveData<Result<MealUI>>()
+    val getMealResult: LiveData<Result<MealUI>> get() = _getMealResult
+
     fun getFreshRecipes() {
         viewModelScope.launch {
             val meals = useCase.getFreshRecipe().map { listOfMeal ->
@@ -29,6 +32,13 @@ class MainViewModel @Inject constructor(
                 }
             }
             _mealsResult.value = meals
+        }
+    }
+
+    fun getMealById(id: Int) {
+        viewModelScope.launch {
+            val meal = useCase.getMealById(id).map { mapper.mapFromEntity(it) }
+            _getMealResult.value = meal
         }
     }
 

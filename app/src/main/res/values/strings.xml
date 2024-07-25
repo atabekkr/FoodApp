@@ -15,4 +15,6 @@
     <string name="see_all">See All</string>
     <string name="breakfast">Breakfast</string>
     <string name="toast_with_berries">Toast with Berries</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="video">Video</string>
 </resources>

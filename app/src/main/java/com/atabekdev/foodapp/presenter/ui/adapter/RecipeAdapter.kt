@@ -17,6 +17,11 @@ class FreshRecipeAdapter : ListAdapter<MealUI, FreshRecipeAdapter.OfferViewHolde
 
             binding.tvModeOfMeal.text = item.strCategory
             binding.tvNameOfMeal.text = item.nameOfMeal
+
+            binding.root.setOnClickListener {
+                onClick.invoke(item.idMeal ?: "52777")
+            }
+
         }
     }
 
@@ -33,6 +38,12 @@ class FreshRecipeAdapter : ListAdapter<MealUI, FreshRecipeAdapter.OfferViewHolde
     override fun onBindViewHolder(holder: OfferViewHolder, position: Int) {
         holder.bind()
     }
+
+    private var onClick: (content: String) -> Unit = {}
+    fun setOnItemClickListener(onClick: (content: String) -> Unit) {
+        this.onClick = onClick
+    }
+
 
     private class MyDiffUtil : DiffUtil.ItemCallback<MealUI>() {
         override fun areItemsTheSame(oldItem: MealUI, newItem: MealUI): Boolean {
