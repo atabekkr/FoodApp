@@ -5,4 +5,6 @@ plugins {
     alias(libs.plugins.safeargs.kotlin) apply false
     alias(libs.plugins.devtools.ksp) apply false
     alias(libs.plugins.dagger) apply false
+    alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.jetbrains.kotlin.jvm) apply false
 }

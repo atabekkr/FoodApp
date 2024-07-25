@@ -42,4 +42,5 @@
     //components` dimens
     <dimen name="size_chef">136dp</dimen>
     <dimen name="standard_icon_width_height">48dp</dimen>
+    <dimen name="icon_size">24dp</dimen>
 </resources>

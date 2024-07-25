@@ -1,4 +1,4 @@
-package com.atabekdev.foodapp
+package com.atabekdev.foodapp.presenter.ui
 
 import android.app.Application
 import androidx.appcompat.app.AppCompatDelegate

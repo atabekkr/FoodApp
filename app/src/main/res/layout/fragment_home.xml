@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_home"
+    android:paddingHorizontal="@dimen/normal_225"
+    tools:context=".presenter.ui.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_marginTop="@dimen/normal_225"
+            android:src="@drawable/ic_menu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_notification"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:src="@drawable/ic_notification"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_menu" />
+
+        <TextView
+            android:id="@+id/tv_denny"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_125"
+            android:fontFamily="@font/font_lora_semibold"
+            android:text="@string/welcome_denny"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_size_text"
+            app:layout_constraintStart_toStartOf="@id/iv_menu"
+            app:layout_constraintTop_toBottomOf="@id/iv_menu" />
+
+        <TextView
+            android:id="@+id/tv_cook_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_lora_semibold"
+            android:text="@string/cooking_today"
+            android:textColor="@color/brand_color"
+            android:textSize="@dimen/normal_text_200"
+            app:layout_constraintStart_toStartOf="@id/iv_menu"
+            app:layout_constraintTop_toBottomOf="@id/tv_denny" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_125"
+            android:layout_marginEnd="@dimen/large_150"
+            android:background="@drawable/bg_search_recipe"
+            android:drawableEnd="@drawable/ic_search"
+            android:drawableTint="@color/white"
+            android:hint="@string/search_recipe"
+            android:padding="@dimen/small_150"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toStartOf="@id/iv_filter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_cook_today" />
+
+        <ImageView
+            android:id="@+id/iv_filter"
+            android:layout_width="@dimen/standard_icon_width_height"
+            android:layout_height="@dimen/standard_icon_width_height"
+            android:background="@drawable/bg_search_recipe"
+            android:padding="@dimen/small_150"
+            android:src="@drawable/ic_filter"
+            app:layout_constraintBottom_toBottomOf="@id/et_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/et_search" />
+
+        <TextView
+            android:id="@+id/tv_fresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_125"
+            android:fontFamily="@font/font_lora_semibold"
+            android:text="@string/today_s_fresh_recipe"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_size_text"
+            app:layout_constraintStart_toStartOf="@id/iv_menu"
+            app:layout_constraintTop_toBottomOf="@id/et_search" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_125"
+            android:fontFamily="@font/font_lora_semibold"
+            android:text="@string/see_all"
+            android:textColor="@color/brand_color"
+            android:textSize="@dimen/medium_size_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_search" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_100"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tv_fresh"
+            tools:listitem="@layout/item_fresh_recipe" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

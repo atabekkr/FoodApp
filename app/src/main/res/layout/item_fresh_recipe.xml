@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/small_100"
+    android:backgroundTint="#707070"
+    android:padding="0dp"
+    app:cardCornerRadius="@dimen/small_150"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_150">
+
+        <ImageView
+            android:id="@+id/iv_fav"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:src="@drawable/ic_fav_outlined"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_pic_of_meal"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="@dimen/normal_225"
+            android:src="@drawable/pic_cake"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_fav"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_mode_of_meal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_lora_bold"
+            android:text="@string/breakfast"
+            android:textColor="@color/additional_color_1"
+            android:textSize="@dimen/small_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_pic_of_meal" />
+
+        <TextView
+            android:id="@+id/tv_name_of_meal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_lora_bold"
+            android:text="@string/toast_with_berries"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_mode_of_meal" />
+
+        <ImageView
+            android:id="@+id/iv_time"
+            android:layout_width="@dimen/normal_100"
+            android:layout_height="@dimen/normal_100"
+            android:layout_marginTop="@dimen/normal_100"
+            android:src="@drawable/ic_time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_of_meal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_100"
+            android:fontFamily="@font/font_lora_semibold"
+            android:text="10:03"
+            android:textColor="@color/brand_color"
+            app:layout_constraintBottom_toBottomOf="@id/iv_time"
+            app:layout_constraintStart_toEndOf="@id/iv_time"
+            app:layout_constraintTop_toTopOf="@id/iv_time" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_125"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_time">
+
+            <ImageView
+                android:layout_width="@dimen/normal_100"
+                android:layout_height="@dimen/normal_100"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/ic_star_filled" />
+
+            <ImageView
+                android:layout_width="@dimen/normal_100"
+                android:layout_height="@dimen/normal_100"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/ic_star_filled" />
+
+            <ImageView
+                android:layout_width="@dimen/normal_100"
+                android:layout_height="@dimen/normal_100"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/ic_star_filled" />
+
+            <ImageView
+                android:layout_width="@dimen/normal_100"
+                android:layout_height="@dimen/normal_100"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/ic_star_filled" />
+
+            <ImageView
+                android:layout_width="@dimen/normal_100"
+                android:layout_height="@dimen/normal_100"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/ic_star_half_filled" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
