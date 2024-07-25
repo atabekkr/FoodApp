@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.safeargs.kotlin)
+    alias(libs.plugins.devtools.ksp)
+    alias(libs.plugins.dagger)
 }
 
 android {
@@ -33,9 +36,15 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
+
+    implementation(libs.androidx.room)
+    ksp(libs.androidx.room.compiler)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -45,4 +54,16 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //fragment and navigation
+    implementation(libs.androidx.fragment.ktx)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+
+    //reflection-free flavor by kirich
+    implementation(libs.viewbinding.kirich)
+
+    //dagger-hilt
+    implementation(libs.dagger)
+    ksp(libs.dagger.compiler)
 }

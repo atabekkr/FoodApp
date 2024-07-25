@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.LoginFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:src="@drawable/pic_bg_register" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient_login" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/size_chef"
+            android:layout_height="@dimen/size_chef"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/normal_325"
+            android:src="@drawable/pic_chef" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_lora_bold"
+            android:text="@string/khana_recipe"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_text_200" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_lora_semibold"
+            android:text="@string/cook_in_easy_way"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_text_100" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_175"
+            android:fontFamily="@font/font_lora_semibold"
+            android:text="@string/login"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_text_200" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normal_225"
+            android:layout_marginTop="@dimen/normal_350"
+            android:backgroundTint="@color/white"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="@dimen/normal_225"
+            android:fontFamily="@font/font_lora_regular"
+            android:hint="@string/email_address"
+            android:paddingHorizontal="@dimen/normal_100"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normal_225"
+            android:backgroundTint="@color/white"
+            android:drawableStart="@drawable/ic_key"
+            android:drawableEnd="@drawable/ic_eye"
+            android:drawablePadding="@dimen/normal_225"
+            android:fontFamily="@font/font_lora_regular"
+            android:hint="@string/password"
+            android:paddingHorizontal="@dimen/normal_100"
+            android:textColorHint="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normal_225"
+            android:fontFamily="@font/font_lora_medium"
+            android:text="@string/forgot_password"
+            android:textAlignment="textEnd"
+            android:textColor="@color/brand_color"
+            android:textSize="@dimen/normal_text_100" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/normal_125"
+            android:src="@drawable/pic_google_facebook" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_login"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normal_225"
+            android:layout_marginTop="@dimen/normal_100"
+            android:fontFamily="@font/font_lora_semibold"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_text_150"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/small_50"
+            android:gravity="bottom|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small_50"
+                android:fontFamily="@font/font_lora_bold"
+                android:text="@string/not_registered_yet"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text_100" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_lora_bold"
+                android:text="@string/register_now"
+                android:textAlignment="center"
+                android:textColor="@color/brand_color"
+                android:textSize="@dimen/normal_text_100" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
